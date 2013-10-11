@@ -18,6 +18,15 @@
   <title></title>
 </head>
 <body>
-  <%= yield %>
+  <div class="container">
+    <nav id='top-nav-bar'>
+      <form class = "login" action='/login' method='POST'>
+        <input type='text' name='user[user_name]' placeholder='Username'>
+        <input type='password' name='user[password]' placeholder='Password'>
+      </form>
+      <div class="welcome-text">Welcome to Flashcards!<img src='#'/></div>
+    </nav>
+      <%= yield %>
+  </div>
 </body>
 </html>
