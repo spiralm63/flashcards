@@ -2,7 +2,9 @@
   margin: auto;
   width: 1080px;
   padding: 0;
-  background-color: #EEEEEE;
+  background-image:url("http://media02.hongkiat.com/black_wallpapers/black-matter.jpg");
+  background-size: 720px auto;
+  /*background-image: url("http://fc09.deviantart.net/fs71/i/2011/145/b/9/coyotes_desktop_background_by_notmatthias-d3h7qt4.png");*/
   border-radius: 5px;
 }
 /* CLEARFIX */
@@ -33,6 +35,7 @@ body {
 
 nav#top-nav-bar {
   height:40px;
+  /*background-color:#DCD2AF;*/
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f3f3f3), color-stop(51%,#ededed), color-stop(100%,#ffffff));
   box-shadow:0px 0px 8px #777;
 }
@@ -75,13 +78,96 @@ li.stat {
 }
 
 a:link {
+   text-decoration: none;
    color: #505050;
 }
 
-.user-stats {
-  height:200px;
+a:visited {
+  text-decoration: none;
+  color: #505050;
+}
+
+a:active {
+}
+
+
+.user-stats, .deck-box {
+  height:250px;
   width:75%;
   margin: 50px auto;
   box-shadow:0px 0px 8px #777;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f3f3f3), color-stop(51%,#ededed), color-stop(100%,#ffffff));
 }
+
+.deck-box {
+  border-radius: 10px;
+  width:40%;
+  overflow:hidden;
+}
+
+.deck-header, .deck-footer {
+  margin-top: 0;
+  margin-bottom:0;
+  padding: 10px;
+  text-align:center;
+}
+
+.deck-footer {
+  background-image: url('http://fotobg.ru/upload/img1349976820.jpg');
+  background-repeat:none;
+}
+
+.deck-img-container {
+  height:67%;
+  overflow: hidden;
+}
+
+.deck-image {
+  width:100%;
+  height:auto;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
