@@ -1,0 +1,17 @@
+<article class='deck-box'>
+  <h3 class='card-header'><%= @card.deck.title %> </h3>
+    <div class="question"><%= @card.question %> </div>
+    <div class="form">
+      <form id= "answer" action='/guess' method="POST">
+      <input type="text" name='answer' class="user-input"/>
+      </form>
+    </div>
+   <footer class="button"> 
+     <a href="#"><h3 class="deck-footer">Submit</h3></a>
+      <script>
+       $(".button a").click(function(){
+        $("#answer").submit();
+      });
+      </script>
+   </footer>
+</article>
