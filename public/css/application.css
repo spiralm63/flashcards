@@ -4,7 +4,6 @@
   padding: 0;
   background-image:url("http://media02.hongkiat.com/black_wallpapers/black-matter.jpg");
   background-size: 720px auto;
-  /*background-image: url("http://fc09.deviantart.net/fs71/i/2011/145/b/9/coyotes_desktop_background_by_notmatthias-d3h7qt4.png");*/
   border-radius: 5px;
 }
 /* CLEARFIX */
@@ -50,20 +49,28 @@ form.login {
   text-align: left;
 }
 
+
 ul.user-stats-list {
   padding:20px;
 }
 
+#deck-title-image {
+  width:100%;
+  height:auto;
+}
+
 li.deck-title {
   display: table;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f3f3f3), color-stop(51%,#ededed), color-stop(100%,#ffffff));
+  background-image: url('http://us.123rf.com/400wm/400/400/luchschen/luchschen0709/luchschen070900109/1738684-brushed-aluminum-background-effect.jpg');
   box-shadow:0px 0px 8px #777;
-  height:60px;
+  height:80px;
   width:25%;
   border-radius: 5px;
-  margin-bottom: 20px;
   list-style-type: none;
   text-align: center;
+  margin:10px;
+  float:left;
+  display:inline;
 }
 
 li.stat {
@@ -87,9 +94,6 @@ a:visited {
   color: #505050;
 }
 
-a:active {
-}
-
 
 .user-stats, .deck-box {
   height:250px;
@@ -100,21 +104,36 @@ a:active {
 }
 
 .deck-box {
+  position:relative;
   border-radius: 10px;
   width:40%;
   overflow:hidden;
 }
 
-.deck-header, .deck-footer {
+
+.deck-header, .deck-footer, .card-header {
   margin-top: 0;
   margin-bottom:0;
   padding: 10px;
   text-align:center;
 }
 
-.deck-footer {
-  background-image: url('http://fotobg.ru/upload/img1349976820.jpg');
+.card-header {
+  border-bottom: 1px solid #999999;
+}
+
+.button {
+  background-image: url('http://us.123rf.com/400wm/400/400/luchschen/luchschen0709/luchschen070900109/1738684-brushed-aluminum-background-effect.jpg');
+  background-size: 432px auto;  
   background-repeat:none;
+  position:absolute;
+  bottom:0px;
+  width:100%;
+}
+
+.submit-answer {
+  margin-top:20px;
+  text-align:center;
 }
 
 .deck-img-container {
@@ -125,7 +144,17 @@ a:active {
 .deck-image {
   width:100%;
   height:auto;
+}
 
+.question {
+  padding:20px;
+  text-align:center;
+}
+
+.form {
+margin: 0 auto; 
+width:250px;
+margin-bottom:10px;
 }
 
 
