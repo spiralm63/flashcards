@@ -21,11 +21,18 @@
 <body>
   <div class="container">
     <nav id='top-nav-bar'>
-      <form class = "login" action='/login' method='POST'>
-        <input type='text' name='user[user_name]' placeholder='Username'>
-        <input type='password' name='user[password]' placeholder='Password'>
-        <input type='submit' value='login'/>
-      </form>
+      <% if authenticated? %>
+        <div class="login">Hello, <%= current_user.user_name %> <a href = "/logout" > Logout</a> 
+        </div> 
+        <% else %>
+          <form class = "login" action='/login' method='POST'>
+            <input type='text' name='user[user_name]' placeholder='Username'>
+            <input type='password' name='user[password]' placeholder='Password'>
+            <input type='submit' value='login'/>
+            <a href = '/signup'>Sign up</a>
+          </form>
+        <% end %>
+
       <div class="welcome-text">Welcome to Flashcards!<img src='#'/></div>
     </nav>
       <%= yield %>

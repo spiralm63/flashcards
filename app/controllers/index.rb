@@ -14,7 +14,8 @@ end
 get '/game_on/:deck_id' do
   @play_deck = Deck.find(params[:deck_id])
   @current_game = Game.create(deck_id: @play_deck.id)
-
+  current_user.games << @current_game
+  
   session[:game_id] = @current_game.id
   session[:card_number] = 0
 
@@ -49,5 +50,51 @@ post '/guess/:card_id' do
     redirect to "/cards/#{@current_game.deck.cards[session[:card_number]].id}"
   end
 end
+
+
+
+
+
+############## SESSIONS ##################
+
+
+get '/logout' do
+  session.clear
+  redirect to '/'
+end
+
+post '/login' do
+  @current_user = User.find_by_user_name(params[:user][:user_name])
+  
+  session[:user_id] = @current_user.id
+
+  redirect to '/'
+end
+
+
+get '/signup' do
+
+  erb :signup
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
