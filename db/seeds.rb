@@ -9,10 +9,6 @@ cards = [Card.create(question: "What is the capital of Illinois?", expected_answ
         Card.create(question: "What is the capital of New York?", expected_answer: "Albany"),
         Card.create(question: "What is the capital of Vermont?", expected_answer: "Montpelier")]
 
-<<<<<<< HEAD
 cards.each do |card|
   deck.cards << card
-=======
-
->>>>>>> deck layout and other stuff
 end

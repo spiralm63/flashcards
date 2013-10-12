@@ -2,7 +2,7 @@
   <h3 class='card-header'><%= @card.deck.title %> </h3>
     <div class="question"><%= @card.question %> </div>
     <div class="form">
-      <form id= "answer" action='/guess' method="POST">
+      <form id= "answer" action="/guess/<%= @card.id %>" method="POST">
       <input type="text" name='answer' class="user-input"/>
       </form>
     </div>

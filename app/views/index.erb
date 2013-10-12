@@ -13,11 +13,7 @@
 
 <div class='right-column'>
   <article class='user-stats'>
-    <ul class='user-stats-list'>
-      <% @current_user.stats.each do |category, stat| %>
-      <li class='stat'><%= "#{category.to_s.humanize}: #{stat}" %></li>
-      <% end %>
-    </ul>
+   
   </article>
 </div>
 
