@@ -1,7 +1,7 @@
 <article class='deck-box'>
   <h3 class="deck-header"><%= @deck.title %></h3>
   <div class="deck-img-container">
-    <img class="deck-image" src="http://cdn2.sbnation.com/uploads/chorus_image/image/14219359/jpeg.0_cinema_640.0.jpeg"/>
+    <img class="deck-image" src="<%= @deck.photo_url %>"/>
   </div>
   <footer class="button">
     <% if authenticated? %>
