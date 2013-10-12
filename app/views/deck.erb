@@ -4,7 +4,16 @@
     <img class="deck-image" src="http://cdn2.sbnation.com/uploads/chorus_image/image/14219359/jpeg.0_cinema_640.0.jpeg"/>
   </div>
   <footer class="button">
-    <a href=<%= "/game_on/#{@deck.id}"%>> <h3 class="deck-footer">Play this deck</h3></a>
+    <% if authenticated? %>
+    <a href=<%= "/game_on/#{@deck.id}"%>> 
+      <h3 class="deck-footer">Play this deck</h3>
+    </a>
+    <% else %>
+    <a href=<%= "/signup"%>> 
+      <h3 class="deck-footer">Sign up or log in to play this deck</h3>
+    </a>
+    <% end %>
   </footer>
+
 </article>
 

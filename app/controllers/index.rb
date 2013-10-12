@@ -8,14 +8,14 @@ end
 
 get '/decks/:deck_id' do
   @deck = Deck.find(params[:deck_id])
-  erb :deck
+  erb :deck         
 end
 
 get '/game_on/:deck_id' do
   @play_deck = Deck.find(params[:deck_id])
   @current_game = Game.create(deck_id: @play_deck.id)
   current_user.games << @current_game
-  
+
   session[:game_id] = @current_game.id
   session[:card_number] = 0
 
@@ -47,7 +47,8 @@ post '/guess/:card_id' do
   if @current_game.deck.cards.last == @card
    redirect to '/results'
   else 
-    redirect to "/cards/#{@current_game.deck.cards[session[:card_number]].id}"
+    next_card = @current_game.deck.cards[session[:card_number]]
+    redirect to "/cards/#{next_card.id}"
   end
 end
 
