@@ -65,11 +65,19 @@ get '/logout' do
 end
 
 post '/login' do
-  @current_user = User.find_by_user_name(params[:user][:user_name])
-  
-  session[:user_id] = @current_user.id
+  found_user = User.find_by_user_name(params[:user_name])
 
-  redirect to '/'
+  if found_user
+    @current_user = found_user.authenticate(params[:password])
+  end
+  
+  if @current_user
+    session[:user_id] = @current_user.id
+
+    redirect to '/'
+  else
+    redirect to "/"
+  end
 end
 
 
