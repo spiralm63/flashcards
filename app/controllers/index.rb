@@ -33,7 +33,11 @@ end
 
 
 get '/results' do
+  user_id = current_user.id
   @current_game = Game.find(session[:game_id])
+  session.clear
+  session[:user_id] = user_id
+  p session
   erb :results
 end
 
