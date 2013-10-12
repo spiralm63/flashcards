@@ -95,7 +95,7 @@ a:visited {
 }
 
 
-.user-stats, .deck-box {
+.user-stats, .deck-box, .result-box {
   height:250px;
   width:75%;
   margin: 50px auto;
@@ -103,7 +103,7 @@ a:visited {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f3f3f3), color-stop(51%,#ededed), color-stop(100%,#ffffff));
 }
 
-.deck-box {
+.deck-box, .result-box {
   position:relative;
   border-radius: 10px;
   width:40%;
@@ -111,14 +111,15 @@ a:visited {
 }
 
 
-.deck-header, .deck-footer, .card-header {
+.deck-header, .deck-footer, .card-header, .result-header, .result-footer {
   margin-top: 0;
   margin-bottom:0;
   padding: 10px;
   text-align:center;
 }
 
-.card-header {
+
+.card-header, .result-header {
   border-bottom: 1px solid #999999;
 }
 
@@ -155,6 +156,19 @@ a:visited {
 margin: 0 auto; 
 width:250px;
 margin-bottom:10px;
+}
+
+.result-list {
+  list-style-type: none;
+  text-align: center;
+}
+
+.stat-name {
+  font-weight: bold;
+}
+
+.result-list li {
+  margin-bottom: 10px;
 }
 
 

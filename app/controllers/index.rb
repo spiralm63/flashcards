@@ -33,6 +33,7 @@ end
 
 
 get '/results' do
+  @current_game = Game.find(session[:game_id])
   erb :results
 end
 
