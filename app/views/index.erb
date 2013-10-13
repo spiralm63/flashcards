@@ -2,18 +2,32 @@
   <nav class='left-deck-index'>
     <ul class='deck-list'>
       <% @decks.each do |deck| %>
-        <li class='deck-title'>
-          <a href="/decks/<%=deck.id %>"><%= deck.title %></a>
-        </li> 
+      <li class="deck-title">
+        <a href="/decks/<%= deck.id %>">
+          <h3 class="deck-header"><%= deck.title %></h3>
+        </a>
+        <div class="deck-img-container">
+          <img class="deck-image" src="<%= deck.photo_url %>"/>
+        </div>
+      </li>
         <!--TODO: Add photo_url img here -->
       <% end %>
     </ul>
   </nav>
 </div>
 
+<% if authenticated? %>
 <div class='right-column'>
   <article class='user-stats'>
-   
+    <h3 class="deck-header">Your all time statistics</h3>
+    <ul class="user-stat-list">
+   <% current_user.stats.each do |stat_name, stat_result| %>
+    <li class="stat">
+     <%= stat_name.to_s.humanize %> : <%= stat_result %>
+    </li> 
+   <% end %>
+
+    </ul>
   </article>
 </div>
-
+<% end %>

@@ -50,8 +50,8 @@ nav#top-nav-bar {
 }
 
 
-ul.user-stats-list {
-  padding:20px;
+ul.user-stat-list {
+  padding:10px;
 }
 
 #deck-title-image {
@@ -61,10 +61,11 @@ ul.user-stats-list {
 
 li.deck-title {
   display: table;
-  background-image: url('http://us.123rf.com/400wm/400/400/luchschen/luchschen0709/luchschen070900109/1738684-brushed-aluminum-background-effect.jpg');
+  /*background-image: url('http://us.123rf.com/400wm/400/400/luchschen/luchschen0709/luchschen070900109/1738684-brushed-aluminum-background-effect.jpg');*/
+  
   box-shadow:0px 0px 8px #777;
-  height:140px;
-  width:30%;
+  height:160px;
+  width:35%;
   border-radius: 5px;
   list-style-type: none;
   text-align: center;
@@ -73,15 +74,15 @@ li.deck-title {
   display:inline;
 }
 
+.deck-title .deck-header {
+  height:10px;
+  padding-top: 5px;
+}
+
 li.stat {
   list-style-type: none;
   color: #505050;
-}
-
-.deck-title a {
-  display:table-cell;
-  vertical-align:middle;
-  text-decoration: none;
+  padding:5px;
 }
 
 a:link {
@@ -95,7 +96,7 @@ a:visited {
 }
 
 
-.user-stats, .deck-box, .result-box {
+.user-stats, .deck-box, .result-box, .signup-box {
   height:350px;
   width:75%;
   margin: 50px auto;
@@ -103,7 +104,11 @@ a:visited {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f3f3f3), color-stop(51%,#ededed), color-stop(100%,#ffffff));
 }
 
-.deck-box, .result-box {
+.user-stats {
+  height:200px;
+}
+
+.deck-box, .result-box, .signup-box {
   position:relative;
   border-radius: 10px;
   width:40%;
@@ -112,6 +117,9 @@ a:visited {
 
 
 .deck-header, .deck-footer, .card-header, .result-header, .result-footer {
+  background-image: url('http://us.123rf.com/400wm/400/400/luchschen/luchschen0709/luchschen070900109/1738684-brushed-aluminum-background-effect.jpg');
+  background-size: 100% auto;  
+  background-repeat:none;
   margin-top: 0;
   margin-bottom:0;
   padding: 10px;
@@ -124,9 +132,6 @@ a:visited {
 }
 
 .button {
-  background-image: url('http://us.123rf.com/400wm/400/400/luchschen/luchschen0709/luchschen070900109/1738684-brushed-aluminum-background-effect.jpg');
-  background-size: 100% auto;  
-  background-repeat:none;
   position:absolute;
   bottom:0px;
   width:100%;
@@ -137,14 +142,21 @@ a:visited {
   text-align:center;
 }
 
+.deck-title .deck-img-container {
+  height:88%;
+  overflow: hidden;
+}
+
 .deck-img-container {
-  height:67%;
+  height:76%;
   overflow: hidden;
 }
 
 .deck-image {
   width:100%;
   height:auto;
+  display:block;
+  margin-top:-10px;
 }
 
 .question {
@@ -169,6 +181,21 @@ margin-bottom:10px;
 
 .result-list li {
   margin-bottom: 10px;
+}
+
+.signup-table {
+  padding-top: 25px;
+  padding-left: 100px;
+}
+
+h3.signup-header {
+  text-align: center;
+  margin-top: 75px;
+  color: #505050;
+}
+
+#password-line {
+  padding-right: 9px;
 }
 
 

@@ -2,13 +2,14 @@ require 'pry'
 
 get '/' do
   @decks = Deck.all
+  @stats = current_user.stats if authenticated?
   erb :index
 end
 
 
 get '/decks/:deck_id' do
   @deck = Deck.find(params[:deck_id])
-  erb :deck         
+  erb :deck 
 end
 
 get '/game_on/:deck_id' do
@@ -35,9 +36,15 @@ end
 get '/results' do
   user_id = current_user.id
   @current_game = Game.find(session[:game_id])
+  
   session.clear
   session[:user_id] = user_id
   p session
+  
+  @results = {}
+  @results[:no_questions] = @current_game.guesses.count
+  @results[:correct_answers] = @current_game.guesses.where(correct: true).count
+  @results[:percentage] = (@results[:correct_answers] / @results[:no_questions].to_f)*100 
   erb :results
 end
 
@@ -55,6 +62,11 @@ post '/guess/:card_id' do
     next_card = @current_game.deck.cards[session[:card_number]]
     redirect to "/cards/#{next_card.id}"
   end
+end
+
+post '/signup' do
+  User.create(params[:signup])
+  redirect to "/"
 end
 
 

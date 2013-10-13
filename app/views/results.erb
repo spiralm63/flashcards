@@ -4,19 +4,45 @@
     <li>
       <span class="stat-name">Correct answers </span>
       <br>
-      <span class="stat-result">All of them</span>
+      <span class="stat-result"><%= @results[:correct_answers] %> /  <%= @results[:no_questions] %></span>
+    </li>
+    
+    <li>
+      <span class="stat-name">Correct answer percentage</span>
+      <br>
+      <span class="stat-result"><%= @results[:percentage].ceil %>%</span>
     </li>
 
     <li>
       <span class="stat-name">Are you a winner?</span>
       <br>
+      <% if @results[:percentage] >= 90 %>
       <span class="stat-result">More like double winner</span>
+      <% elsif @results[:percentage] >= 60 %>
+      <span class="stat-result">Kind of</span>
+      <% elsif @results[:percentage] >= 40 %>
+      <span class="stat-result">Almost</span>
+      <% else %>
+      <span class="stat-result">Far from that</span>
+
+      <% end %>
+
     </li>
 
     <li>
       <span class="stat-name">Conclusion </span>
       <br>
+      <% if @results[:percentage] >= 90 %>
       <span class="stat-result">You are awesome</span>
+      <% elsif @results[:percentage] >= 60 %>
+      <span class="stat-result">You can do better</span>
+      <% elsif @results[:percentage] >= 40 %>
+      <span class="stat-result">Go back to school</span>
+      <% else %>
+      <span class="stat-result">You're probably retarded</span>
+
+      <% end %>
+      
     </li>
 
   </ul>
