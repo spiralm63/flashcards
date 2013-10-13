@@ -124,6 +124,7 @@ a:visited {
   margin-bottom:0;
   padding: 10px;
   text-align:center;
+  border-radius: 10px;
 }
 
 
@@ -145,6 +146,7 @@ a:visited {
 .deck-title .deck-img-container {
   height:88%;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .deck-img-container {
